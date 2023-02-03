@@ -72,8 +72,8 @@ def clean_name(df, config=None):
     Clean the name of a power plant list.
 
     Cleans the column "Name" of the database by deleting very frequent words
-    and nonalphanumerical characters of the column. Returns a  reduced
-    dataframe with nonempty Name-column.
+    and non-alphanumerical characters of the column. Returns a reduced
+    dataframe with non-empty "Name" column.
 
     Parameters
     ----------
@@ -82,7 +82,6 @@ def clean_name(df, config=None):
     config : dict, default None
         Custom configuration, defaults to
         `powerplantmatching.config.get_config()`.
-
     """
     df = get_obj_if_Acc(df)
 
