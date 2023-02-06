@@ -112,7 +112,7 @@ def clean_name(df, config=None):
     return df.assign(Name=name).sort_values("Name")
 
 
-@deprecated(deprecated_in="5.0", removed_in="0.6", details="Use `clean_name` instead.")
+@deprecated(deprecated_in="0.5.0", removed_in="0.6.0", details="Use `clean_name` instead.")
 def clean_powerplantname(df, config=None):
     return clean_name(df, config=config)
 
@@ -140,11 +140,11 @@ def config_target_key(column):
 
 def gather_and_replace(df, mapping):
     """
-    Search for patterns in multiple columns and return a series of represantativ keys.
+    Search for patterns in multiple columns and return a series of representative keys.
 
-    The function will return a series of unique identifyers given by the keys of the
+    The function will return a series of unique identifiers given by the keys of the
     `mapping` dictionary. The order in the `mapping` dictionary determines which
-    represantativ keys are calculated first. Note that these may be overwritten by
+    representative keys are calculated first. Note that these may be overwritten by
     the following mappings.
 
     Parameters
@@ -152,7 +152,7 @@ def gather_and_replace(df, mapping):
     df : pandas.DataFrame
         DataFrame with columns that should be parsed.
     mapping : dict
-        Dictionary mapping the represantativ keys to the regex patterns.
+        Dictionary mapping the representative keys to the regex patterns.
     """
     assert isinstance(mapping, dict)
     res = pd.Series(index=df.index, dtype=object)
@@ -179,7 +179,6 @@ def gather_specifications(
 ):
     """
     Parse columns to collect representative keys.
-
 
     This function will parse the columns specified in `parse_columns` and collects
     the representative keys for each row in `target_columns`. The parsing is based
