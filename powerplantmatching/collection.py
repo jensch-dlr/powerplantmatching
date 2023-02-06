@@ -13,7 +13,7 @@
 # GNU General Public License for more details.
 
 # You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
 """
 Processed datasets of merged and/or adjusted data
 """
@@ -54,7 +54,7 @@ def collect(
     datasets : list or str
         list containing the dataset identifiers as str, or single str
     update : bool
-        Do an horizontal update (True) or read from the cache file (False)
+        Do a horizontal update (True) or read from the cache file (False)
     reduced : bool
         Switch as to return the reduced (True) or matched (False) dataset.
     config : dict
@@ -255,7 +255,7 @@ def powerplants(
     return matched.pipe(set_column_name, "Matched Data")
 
 
-@deprecated(deprecated_in="5.5", removed_in="0.6", details="Use `powerplants` instead.")
+@deprecated(deprecated_in="0.5.5", removed_in="0.6", details="Use `powerplants` instead.")
 def matched_data(
     config=None,
     update=False,
