@@ -223,7 +223,7 @@ def extend_by_VRE(df, config=None, base_year=2017, prune_beyond=True):
         .query('Fueltype != "Hydro"')
         .reindex(columns=config["target_columns"])
     )
-    return df.append(vre, sort=False)
+    return pd.concat([df, vre], axis=0, join="outer")  # df.append(vre, sort=False)
 
 
 def fill_missing_commissioning_years(df):
