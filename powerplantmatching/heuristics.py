@@ -50,12 +50,12 @@ def extend_by_non_matched(
         Already matched dataset which should be extended
     extend_by : pd.DataFrame | str
         Database which is partially included in the matched dataset, but
-        which should be included totally. If str is passed, is will be used
-        to call the corresponding data from data.py
+        which should be included totally. If str is passed, it will be used
+        to call the corresponding data from data.py.
     label : str
         Column name of the additional database within the matched dataset, this
         string is used if the columns of the additional database do not
-        correspond to the ones of the dataset
+        correspond to the ones of the dataset.
     """
     from . import data
     from .cleaning import aggregate_units
