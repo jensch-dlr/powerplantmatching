@@ -153,7 +153,7 @@ def powerplants(
     extend_by_vres : Boolean, default False
             Whether extend the dataset by variable renewable energy sources
             given by powerplantmatching.data.OPSD_VRE()
-    extendby_kwargs : Dict,
+    extend_by_kwargs : Dict,
             Dict of keyword arguments passed to powerplantmatchting.
             heuristics.extend_by_non_matched
     fill_geopositions: Boolean, default True
@@ -168,7 +168,6 @@ def powerplants(
             if `update` is true.
     **collection_kwargs : kwargs
             Arguments passed to powerplantmatching.collection.Collection.
-
     """
     from . import __version__
 
